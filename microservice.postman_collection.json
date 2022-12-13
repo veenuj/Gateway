@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "19ef3058-c7f5-4ba9-9d67-7814e470257f",
+		"name": "microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24767275"
+	},
+	"item": [
+		{
+			"name": "payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_id\": 2,\r\n    \"payment_status\": \"success\",\r\n    \r\n    \"amount\": 400000,\r\n    \"orderId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9193/payment/doPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9193",
+					"path": [
+						"payment",
+						"doPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"APple 14\",\r\n    \"quantity\": 12,\r\n    \"price\": 12000\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/orderAPI/placeOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"orderAPI",
+						"placeOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/payment/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"payment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
